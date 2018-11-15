@@ -1,40 +1,24 @@
 <template>
-  <div class="wrapper">
-    <image :src="logo" class="logo" />
-    <text class="greeting">The environment is ready 2!</text>
-    <router-view/>
+  <div class="player">
+    <Player />
   </div>
 </template>
 
 <script>
+import Player from '@/components/Player.vue'
+
 export default {
   name: 'App',
+  components: {
+    Player
+  },
   data () {
     return {
-      logo: 'https://gw.alicdn.com/tfs/TB1yopEdgoQMeJjy1XaXXcSsFXa-640-302.png'
     }
   }
 }
 </script>
 
-<style scoped>
-  .wrapper {
-    justify-content: center;
-    align-items: center;
-  }
-  .logo {
-    width: 424px;
-    height: 200px;
-  }
-  .greeting {
-    text-align: center;
-    margin-top: 70px;
-    font-size: 50px;
-    color: #41B883;
-  }
-  .message {
-    margin: 30px;
-    font-size: 32px;
-    color: #727272;
-  }
+<style>
+
 </style>
